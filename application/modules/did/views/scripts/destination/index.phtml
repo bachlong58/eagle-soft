@@ -1,0 +1,72 @@
+<div id="popup_block" class="popup_block">
+                    <div>
+				    	<h1 style="width:510px; margin-bottom:15px;">Edit item</h1>
+				        	<div class="popup_content"></div>
+				    </div>
+                    </div>
+					<h2>DID Destination</h2>
+                    <table border="0" cellspacing="0" cellpadding="8" width="100%">
+                      <tr>
+                        <td width="12%">DID Destination</td>
+                        <td width="20%"><input name="textfield" type="text" class="txt1" id="textfield"></td>
+                        <td width="5%">&nbsp;</td>
+                        <td width="12%">Customer ID</td>
+                        <td width="51%"><input name="textfield" type="text" class="txt1" id="textfield"></td>
+                      </tr>
+                      <tr>
+                        <td>DID</td>
+                        <td>
+                        	<select name="" class="selectbox1">
+                        		<option>Please Select</option>	
+                        	</select>
+                        </td>
+                        <td>&nbsp;</td>
+                        <td>Activated</td>
+                        <td><input name="active" type="radio" value="1" id="active_1" checked="checked"> <label for="active_1">Yes</label> &nbsp;&nbsp; <input name="active" type="radio" value="0" id="active_0"> <label for="active_0">No</label></td>
+                      </tr>
+                      <tr>
+                      	<td>Validated</td>
+                        <td>
+                            <?php echo $this->formSelect('validated','',array('class'=>'selectbox1'), $this->a_Validates);?>
+                        </td>
+                        <td>&nbsp;</td>
+                        <td>Priority</td>
+                        <td>
+                            <?php echo $this->formSelect('priority','',array('class'=>'selectbox1'), $this->a_Priorities);?>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Voip call</td>
+                        <td><input name="voip_call" type="radio" value="1" id="active_1" checked="checked"> <label for="active_1">Yes</label> &nbsp;&nbsp; <input name="voip_call" type="radio" value="0" id="active_0"> <label for="active_0">No</label></td>
+                        <td colspan="3">&nbsp;</td>                        
+                      </tr>
+                      <tr><td colspan="5">&nbsp;</td></tr>
+                      <tr>
+                          <td><input name="textfield5" type="submit" value="Add" class="btn" id="add"></td>
+                          <td colspan="4"><input name="textfield5" type="submit" value="Clear" class="btn" id="clear-form"></td>
+                      </tr>
+                    </table>
+                    <p>&nbsp;</p>
+                    <table width="100%" border="0" class="filterbox">
+                    <tr>
+                    <td width="10%" valign="middle">Filter on DID</td>
+                    <td width="15%" valign="middle"><input name="textfield" type="text" class="txt1" id="textfield"></td>
+                    <td width="1%">&nbsp;</td>
+                    <td width="64%" valign="middle"><input name="textfield5" type="submit" value="Apply Filter" class="btn" id="" style="width:95px;"></td>
+                    </tr>
+                    </table>
+                    <table width="100%" border="1" cellpadding="5" cellspacing="0" bordercolor="#c4c4c4" style="border-collapse:collapse;" id="list-view">
+                      <thead>
+                      <tr>
+                        <td bgcolor="#dedede" width="15%"><strong>DID Destination</strong></td>
+                        <td bgcolor="#dedede" width="15%"><strong>Creation Date</strong></td>
+                        <td bgcolor="#dedede" width="15%"><strong>DID</strong></td>
+                        <td bgcolor="#dedede" width="15%"><strong>Account Number</strong></td>
+                        <td bgcolor="#dedede" width="10%"><strong>Active</strong></td>
+                        <td bgcolor="#dedede" width="10%"><strong>Prior</strong></td>
+                        <td bgcolor="#dedede" width="10%"><strong>Minutes Used</strong></td>
+                        <td bgcolor="#dedede" width="10%"><strong>Action</strong></td>
+                      </tr>
+                      </thead>
+                      <tbody></tbody>
+                    </table>
